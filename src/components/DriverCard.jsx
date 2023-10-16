@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types'
 import Rating from "./Rating";
 
 function DriverCard({name,rating,img,car}){
@@ -19,3 +20,12 @@ function DriverCard({name,rating,img,car}){
 
 }
 export default DriverCard;
+DriverCard.propTypes = {
+  name: PropTypes.string,
+  rating: PropTypes.number,
+  img: PropTypes.string,
+  car: PropTypes.shape({
+    model: PropTypes.string,
+    licensePlate: PropTypes.string,
+  }),
+};

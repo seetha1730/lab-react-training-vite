@@ -14,5 +14,5 @@ function Rating({ children }) {
 export default Rating;
 
 Rating.propTypes = {
-    number: PropTypes.string
+  children: PropTypes.node
 }

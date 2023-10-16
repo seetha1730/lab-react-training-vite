@@ -1,4 +1,5 @@
 import { useState } from "react";
+import PropTypes from 'prop-types'
 import glass  from '../assets/images/glasses.png'
 
 function ClickablePicture({img}){
@@ -18,3 +19,6 @@ return (
 )
 }
 export default ClickablePicture;
+ClickablePicture.propTypes={
+  img :PropTypes.string 
+}

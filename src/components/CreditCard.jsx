@@ -8,7 +8,7 @@ function CreditCard({number,expirationMonth,expirationYear,bank,owner, bgColor,c
         borderRadius:"10px",
         padding:"20px",
         marginLeft:"20px",
-        width:"25%"
+        width:"33%"
       };
       return (
   

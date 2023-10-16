@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types'
 function IdCard({lastName,firstName,gender,height,birth, picture}){
    return (
     <div className="idCard">
@@ -18,3 +19,12 @@ function IdCard({lastName,firstName,gender,height,birth, picture}){
 }
 
 export default IdCard;
+IdCard.propTypes = {
+   lastName: PropTypes.string,
+   firstName: PropTypes.string,
+   gender: PropTypes.string,
+   height: PropTypes.number,
+   birth: PropTypes.oneOfType([PropTypes.string, PropTypes.instanceOf(Date)]),
+   picture: PropTypes.string,
+  
+}

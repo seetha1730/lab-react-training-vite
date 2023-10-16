@@ -8,13 +8,18 @@ import Rating from "./components/Rating";
 import DriverCard from "./components/DriverCard";
 import LikeButton from "./components/LikeButton";
 import ClickablePicture from "./components/ClickablePicture";
-
-
+import Dice from "./components/Dice";
+import Carousel from "./components/Carousel";
+import NumbersTable from "./components/NumbersTable";
+import FaceBook from "./components/FaceBook";
+import SignupPage from "./components/SignupPage";
+import RGBColorPicker from "./components/RGBColorPicker";
 
 
 function App() {
   return (
     <div className="App">
+      <h3>Iteration 1 | Component: IdCard</h3>
       <IdCard
         lastName="Doe"
         firstName="John"
@@ -23,7 +28,6 @@ function App() {
         birth={new Date("1992-07-14")}
         picture="https://randomuser.me/api/portraits/men/44.jpg"
       />
-
       <IdCard
         lastName="Delores "
         firstName="Obrien"
@@ -33,16 +37,17 @@ function App() {
         picture="https://randomuser.me/api/portraits/women/44.jpg"
       />
 
+      <h3>Iteration 2 | Component: Greetings</h3>
       <Greetings lang="de">Ludwig</Greetings>
       <Greetings lang="fr">François</Greetings>
-
+      <h3>Iteration 3 | Component: Random</h3>
       <Random min={1} max={6} />
       <Random min={1} max={100} />
-
+      <h3>Iteration 4 | Component: BoxColor</h3>
       <BoxColor r={255} g={0} b={0} />
       <BoxColor r={128} g={255} b={0} />
-
-      <div className="d-flex">
+      <h3>Iteration 5 | Component: CreditCard</h3>
+      <div className="d-flex w-100">
         <CreditCard
           type="Visa"
           number="0123456789018845"
@@ -76,43 +81,69 @@ function App() {
           color="white"
         />
       </div>
+      <h3>Iteration 6 | Component: Rating</h3>
       <div className="rates border">
-      <Rating>0</Rating>
-      <Rating>1.49</Rating>
-      <Rating>1.5</Rating>
-      <Rating>3</Rating>
-      <Rating>4</Rating>
-      <Rating>5</Rating>
+        <Rating>0</Rating>
+        <Rating>1.49</Rating>
+        <Rating>1.5</Rating>
+        <Rating>3</Rating>
+        <Rating>4</Rating>
+        <Rating>5</Rating>
       </div>
-
+      <h3>Iteration 7 | Component: DriverCard</h3>
       <div className="rates">
-      <DriverCard
-  name="Travis Kalanick"
-  rating={4.2}
-  img="https://si.wsj.net/public/resources/images/BN-TY647_37gql_OR_20170621052140.jpg?width=620&height=428"
-  car={{
-    model: "Toyota Corolla Altis",
-    licensePlate: "CO42DE"
-  }}
-/>
+        <DriverCard
+          name="Travis Kalanick"
+          rating={4.2}
+          img="https://si.wsj.net/public/resources/images/BN-TY647_37gql_OR_20170621052140.jpg?width=620&height=428"
+          car={{
+            model: "Toyota Corolla Altis",
+            licensePlate: "CO42DE"
+          }}
+        />
 
-<DriverCard
-  name="Dara Khosrowshahi"
-  rating={4.9}
-  img="https://ubernewsroomapi.10upcdn.com/wp-content/uploads/2017/09/Dara_ELT_Newsroom_1000px.jpg"
-  car={{
-    model: "Audi A3",
-    licensePlate: "BE33ER"
-  }}
-/>
+        <DriverCard
+          name="Dara Khosrowshahi"
+          rating={4.9}
+          img="https://ubernewsroomapi.10upcdn.com/wp-content/uploads/2017/09/Dara_ELT_Newsroom_1000px.jpg"
+          car={{
+            model: "Audi A3",
+            licensePlate: "BE33ER"
+          }}
+        />
       </div>
-
+      <h3>Iteration 8 | State: LikeButton</h3>
       <LikeButton />
+      <h3>Iteration 9: State: ClickablePicture</h3>
+      <div style={{ marginTop: "20px" }}>
+        <ClickablePicture
+          img="http://res.cloudinary.com/djyjdargg/image/upload/v1550166114/Ironclass/IH_Jan1949.jpg.jpg"
+          imgClicked="maxence-glasses.png"
+        />
+      </div>
+      <h3>Iteration 10 | State: Dice</h3>
+      <Dice />
+      <h3>Iteration 11 | State: Carousel</h3>
+      <Carousel
+        images={[
+          "https://randomuser.me/api/portraits/women/1.jpg",
+          "https://randomuser.me/api/portraits/men/1.jpg",
+          "https://randomuser.me/api/portraits/women/2.jpg",
+          "https://randomuser.me/api/portraits/men/2.jpg"
+        ]}
+      />
+      <h2>Iteration 12 | List and Keys | NumbersTable</h2>
 
-      <ClickablePicture
-  img="http://res.cloudinary.com/djyjdargg/image/upload/v1550166114/Ironclass/IH_Jan1949.jpg.jpg"
-  imgClicked="maxence-glasses.png"
-/>
+      <NumbersTable limit={12} />
+
+      <h2>Iteration 13 | List and Keys - FaceBook (Simple)
+        Iteration 14 | List and Keys - FaceBook (Advanced)</h2>
+      <FaceBook />
+      <h3>Iteration 15 | Form - SignupPage</h3>
+      <SignupPage />
+      <h3>Iteration 16 | Lifting State Up - RGBColorPicker</h3>
+      <RGBColorPicker />
+
     </div>
   );
 }

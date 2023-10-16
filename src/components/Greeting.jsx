@@ -1,4 +1,6 @@
+import PropTypes from 'prop-types'
 function Greetings(props) {
+
     const greetings = {
         de: "Hallo",
         en: "Hello",
@@ -18,3 +20,9 @@ function Greetings(props) {
 
 }
 export default Greetings
+
+Greetings.propTypes = {
+    lang: PropTypes.string,
+    children: PropTypes.string,
+    
+}
